@@ -1,0 +1,176 @@
+@use '../assets/variables/variables.scss' as vars;
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    /*
+        Getting rid of default formatting for <a> elements. `inherits` tells that
+        `a` elements should use the value set on its parent for these properties.
+    */
+    text-decoration: inherit;
+    color: inherit;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    height: 75px;
+
+    .header-left-placeholder, 
+    .header-right-placeholder {
+        flex-grow: 1;
+    }
+}
+
+.header-content {
+    display: flex;
+    width: 1070px;
+    justify-content: flex-start ;
+    align-items: center;
+
+    .logo {
+        padding-top: 10px;
+        padding-right: 10px;
+        img{
+            width: 180px;
+        }
+    }
+
+    .header-links{
+        display: flex;
+        .links-item {
+            flex-grow: 1;
+            font-size: 14px;
+            margin: auto;
+            font-weight: 600;
+            a {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            :hover{
+                background-color: vars.$link-gray;
+                border-radius: 30px;
+            }
+        }
+    }
+
+    .buttons-login{
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        
+        .login-item {
+            margin-left: 20px;
+            
+            a {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 15px;
+                padding-right: 15px;
+                background-color: vars.$green;
+                border-radius: 30px;
+                color: white;
+                font-weight: 600;
+            }
+        }
+    }    
+}
+
+.page-body {
+    background-color: vars.$background-gray;
+    display: flex;
+
+    .body-left-placeholder, 
+    .body-right-placeholder {
+        flex-grow: 1;
+        background-color: vars.$background-gray;
+    }
+}
+
+.body-content{
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 1070px;
+    padding-top: 20px;
+    font-weight: 600;
+
+    .body-links{
+        font-size: 18px;
+        flex-basis: 25%;
+
+        .about{
+            background-color: vars.$green;
+            padding: 20px;
+        }
+
+        .musicca{
+            padding: 20px;
+            background-color: white;
+        }
+
+        .support{
+            padding: 20px;
+            background-color: white;
+        }
+    }
+
+    .company-link{
+        flex-basis: 400px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        .title{
+            font-size: 36px;
+            font-weight: 400;
+            color: vars.$title-gray;
+            padding: 30px;
+        }
+
+        .company{
+            background-color: white;
+            .company-title{
+                font-size: 20px;
+                padding-top: 30px;
+                padding-left: 30px;
+            }
+            .company-text{
+                font-size: 15px;
+                color: vars.$dark-gray;
+                padding-left: 30px;
+                padding-top: 30px;
+                padding-right: 50px;
+                padding-bottom: 30px;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .mission-link{
+        background-color: white;
+        align-self: flex-end;
+        flex-basis: 400px;
+
+        .mission-title{
+            font-size: 20px;
+            padding-top: 30px;
+            padding-left: 30px;
+        }
+
+        .mission-text{
+            font-size: 15px;
+            color: vars.$dark-gray;
+            padding-left: 30px;
+            padding-top: 30px;
+            padding-right: 50px;
+            padding-bottom: 30px;
+            font-weight: 400;
+        }
+    }
+}

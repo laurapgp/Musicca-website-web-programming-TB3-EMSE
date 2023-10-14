@@ -1,0 +1,148 @@
+@use '../assets/variables/variables.scss' as vars;
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    /*
+        Getting rid of default formatting for <a> elements. `inherits` tells that
+        `a` elements should use the value set on its parent for these properties.
+    */
+    text-decoration: inherit;
+    color: inherit;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    height: 75px;
+
+    .header-left-placeholder, 
+    .header-right-placeholder {
+        flex-grow: 1;
+    }
+}
+
+.header-content {
+    display: flex;
+    width: 1070px;
+    justify-content: flex-start ;
+    align-items: center;
+
+    .logo {
+        padding-top: 10px;
+        padding-right: 10px;
+        img{
+            width: 180px;
+        }
+    }
+
+    .header-links{
+        display: flex;
+        .links-item {
+            flex-grow: 1;
+            font-size: 14px;
+            margin: auto;
+            font-weight: 600;
+            a {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            :hover{
+                background-color: vars.$link-gray;
+                border-radius: 30px;
+            }
+        }
+    }
+
+    .buttons-login{
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        
+        .login-item {
+            margin-left: 20px;
+            
+            a {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 15px;
+                padding-right: 15px;
+                background-color: vars.$green;
+                border-radius: 30px;
+                color: white;
+                font-weight: 600;
+            }
+        }
+    }    
+}
+
+.body-page{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: vars.$background-gray;
+    display: flex;
+    .body-leftplaceholder, .body-rightplaceholder{
+        flex-grow: 1;
+        background-color: vars.$background-gray;
+    }
+
+    h1{
+        font-size: 32px;
+        font-weight: 300;
+    }
+
+    .login{
+        background-color: white;
+        flex-basis: 570px;
+        padding-top: 67px;
+        padding-bottom: 60px;
+        padding-left: 60px;
+
+        .login-form{
+            .box-email{
+                width: 450px;
+                height: 45px;
+
+                &:focus{
+                    outline-color: vars.$green;
+                }
+
+                &:invalid{
+                    outline-color: red;
+                }
+            }
+
+            .box-password{
+                width: 450px;
+                height: 45px;
+
+                &:focus{
+                    outline-color: vars.$green;
+                }
+            }
+            .box-email:invalid{
+                border-color: red;
+            }
+
+            &:valid{
+                border-color: vars.$green;
+            }
+
+            .submit{
+                width: 450px;
+                height: 42px;
+                background-color: vars.$green;
+                color: white;
+                font-size: 14px;
+                border-radius: 30px;
+            }
+        }
+    }
+}
