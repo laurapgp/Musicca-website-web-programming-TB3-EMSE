@@ -1,5 +1,5 @@
 # Frontend Musicca
-> This is a frontend created for the Web Programming TB 3 classes at École des Mines Saint-Étienne
+> This is a frontend created for the Web Programming TB 3 classes at the ICM course at the École des Mines Saint-Étienne
 
 ## Requirements
 - Python3
